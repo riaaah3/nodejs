@@ -1,6 +1,7 @@
-# Project: README.md
+function generateMarkDown(data){
+    return `# Project: ${data.title}
     
-    ![GitHub license](https://img.shields.io/badge/license-None-purple.svg)
+    ![GitHub license](https://img.shields.io/badge/license-${data.License}-purple.svg)
 
     ## Table Of Contents
     -[Description](#description)
@@ -12,30 +13,33 @@
     -[License](#License)
     
     ### Description
-    CLI app
+    ${data.Description}
 
     ### Installation
-    npm i
+    ${data.Installation}
 
     ### Testing
-    manual
+    ${data.Testing}
 
     ### ContactMe
     Please check my other projects
-    [Github Profile](https://github.com/riaaah3)
+    [Github Profile](https://github.com/${data.Username})
     If you have any questions, 
-    please feel free to reach me at zaripull18@gmail.com
+    please feel free to reach me at ${data.Email}
 
     ### Usage
-    open source
+    ${data.Usage}
 
     ### Guidelines
-    this project doesn't accept any contributions at this moment
+    ${data.Guidelines}
 
     ### License
-    None
+    ${data.License}
     For more information regarding licensing, 
     please check [here](https://choosealicense.com/licenses/)
 
     
-    
+    `
+}
+
+module.exports = generateMarkDown;
